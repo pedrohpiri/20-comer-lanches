@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 Comer Lanches</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Botão de Voltar ao Topo -->
+    <a href="#" class="back-to-top">&#8679;</a>
+
+    <!-- Pop-up de Promoção -->
+    <div class="popup" id="promo-popup">
+        <div class="popup-content">
+            <p>Confira nossa promoção especial para esta semana!</p>
+            <button onclick="closePopup()">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Cabeçalho do site -->
+    <header>
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo 20 Comer Lanches">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Nós</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção principal de boas-vindas -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Bem-vindo à 20 Comer Lanches</h1>
+            <p>Sabores autênticos e feitos com carinho.</p>
+            <a href="#cardapio" class="btn">Conheça nosso cardápio</a>
+        </div>
+    </section>
+
+    <!-- Seção sobre nós -->
+    <section id="sobre">
+        <h2>Nossa Deliciosa História</h2>
+        <p>Com anos de tradição, oferecemos pastéis artesanais...</p>
+    </section>
+
+    <!-- Seção de cardápio com carrossel -->
+    <section id="cardapio" class="fade-in">
+        <h2>Nosso Cardápio</h2>
+        <div class="galeria-cardapio">
+            <div class="item-cardapio active">
+                <img src="./img/cardapio1.JPG" alt="Pastéis">
+                <h3>Pastéis</h3>
+                <p>Explore nossa variedade de pastéis com diversos recheios para todos os gostos.</p>
+            </div>
+            <div class="item-cardapio">
+                <img src="./img/cardapio2.JPG" alt="Caldos e Mais">
+                <h3>Caldos e Mais</h3>
+                <p>Escolha entre nossos deliciosos caldos e outras opções especiais.</p>
+            </div>
+            <div class="item-cardapio">
+                <img src="./img/cardapio3.JPG" alt="Sanduíches e Bebidas">
+                <h3>Sanduíches e Bebidas</h3>
+                <p>Experimente nossos sanduíches clássicos acompanhados de sucos e bebidas.</p>
+            </div>
+            <!-- Botões de navegação do carrossel -->
+            <div class="carrossel-nav">
+                <button onclick="mudarSlide(-1)">&#10094;</button>
+                <button onclick="mudarSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de contato -->
+    <section id="contato" class="fade-in">
+        <h2>Entre em Contato</h2>
+        <p>Visite-nos ou ligue para fazer seu pedido.</p>
+        <div class="contato-info">
+            <p><strong>Endereço:</strong> Av, 15 de novembro, Nº 3043. Em frente a casa Lotérica do Morada Nova</p>
+            <p><strong>Telefone:</strong> <a href="tel:+5586999067310">(86) 3220-8483</a></p>
+        </div>
+        <!-- Mapa do Google Maps -->
+        <div class="mapa-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.8477613821037!2d-42.78888772414313!3d-5.128213551896484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78e36d2d62a2257%3A0x3e3017cc64b7c7af!2sR.%20Quinze%20de%20Novembro%2C%203043%20-%20Morada%20Nova%2C%20Teresina%20-%20PI%2C%2064023-274!5e0!3m2!1spt-BR!2sbr!4v1730583023898!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+   <!-- Ícone do WhatsApp -->
+<a href="https://wa.me/+5586999067310" class="whatsapp-link" target="_blank">
+    <img src="./img/whatsapp_2504957.png" alt="WhatsApp">
+</a>
+
+<!-- Ícone do Instagram -->
+<a href="https://www.instagram.com/20comerlanches" class="instagram-link" target="_blank">
+    <img src="./img/1298747_instagram_brand_logo_social media_icon.png" alt="Instagram">
+</a>
+
+
+    <!-- Rodapé do site -->
+    <footer>
+        <p>&copy; (Desde 2022) <span class="destaque">20 Comer Lanches</span> - Todos os direitos reservados</p>
+       
+    </footer>
+<!-- Scripts JavaScript -->
+<script src="js/script.js"></script>
+</body>
+</html>
