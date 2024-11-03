@@ -5,24 +5,29 @@
     box-sizing: border-box;
 }
 
-/* Estilos Globais */
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f5f5f5;
-}
 
-/* ====== Cabeçalho e Menu de Navegação ====== */
+
+/* Estilos para o Cabeçalho */
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #FFD700;
-    padding: 15px 0;
+    padding: 15px 20px; /* Ajuste de padding */
 }
 
+/* Estilos para a Logomarca */
+.logo img {
+    width: 80px; /* Ajuste o tamanho da logo */
+    height: auto;
+}
+
+/* Estilos para o Menu de Navegação */
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    gap: 20px; /* Espaçamento entre os itens do menu */
+    margin: 0;
 }
 
 nav ul li a {
@@ -40,9 +45,6 @@ nav ul li a:hover {
     color: #FFD700;
 }
 
-nav ul li a.active {
-    border-bottom: 2px solid #333;
-}
 
 /* ====== Seção de Boas-Vindas (Hero) ====== */
 .hero {
