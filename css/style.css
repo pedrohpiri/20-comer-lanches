@@ -1,34 +1,34 @@
-/* Reset para remover margens e padding padrão */
+/* ====== Reset ====== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ====== Estilos Globais ====== */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
 
-
-/* Estilos para o Cabeçalho */
+/* ====== Cabeçalho ====== */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ffc400db; /* Substitua pela cor exata da logomarca */
+    background-color: #ffc400db; /* Cor da logomarca */
     padding: 15px 20px;
 }
 
-
-/* Estilos para a Logomarca */
 .logo img {
-    width: 180px; /* Ajuste o tamanho da logo */
+    width: 180px;
     height: auto;
 }
 
-/* Estilos para o Menu de Navegação */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px; /* Espaçamento entre os itens do menu */
-    margin: 0;
+    gap: 20px;
 }
 
 nav ul li a {
@@ -43,11 +43,10 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #333;
-    color:  #ffc400db;
+    color: #ffc400db;
 }
 
-
-/* ====== Seção de Boas-Vindas (Hero) ====== */
+/* ====== Seção Hero (Boas-Vindas) ====== */
 .hero {
     position: relative;
     background-image: url('../img/Design sem nome (4).png');
@@ -184,30 +183,9 @@ section {
     display: block;
 }
 
-.menu-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.menu-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.menu-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
 /* ====== Seção de Contato ====== */
 #contato {
-    background-color:  #ffc400db;
+    background-color: #ffc400db;
     color: #333;
 }
 
@@ -309,58 +287,39 @@ footer p {
     height: 24px;
 }
 
-/* Estilos para o botão do WhatsApp */
+/* ====== Botões de Redes Sociais Fixos ====== */
+.whatsapp-link, .instagram-link {
+    position: fixed;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
 .whatsapp-link {
-    position: fixed;
-    bottom: 20px;
     right: 20px;
-    width: 60px;
-    height: 60px;
-    z-index: 1000;
     background-color: #25D366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
 }
 
-.whatsapp-link:hover {
-    transform: scale(1.1);
-}
-
-.whatsapp-link img {
-    width: 35px;
-    height: 35px;
-}
-
-/* Estilos para o botão do Instagram */
 .instagram-link {
-    position: fixed;
-    bottom: 20px;
-    left: 20px; /* Posiciona no lado esquerdo da tela */
-    width: 60px;
-    height: 60px;
-    z-index: 1000;
-    background-color: #e1dcde; /* Cor característica do Instagram */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+    left: 20px;
+    background-color: #e1dcde;
 }
 
-.instagram-link:hover {
+.whatsapp-link:hover, .instagram-link:hover {
     transform: scale(1.1);
 }
 
-.instagram-link img {
+.whatsapp-link img, .instagram-link img {
     width: 35px;
     height: 35px;
 }
-
 
 /* ====== Botão de Voltar ao Topo ====== */
 .back-to-top {
@@ -399,36 +358,47 @@ footer p {
     transform: translateY(0);
 }
 
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.slide-in {
     opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.popup.show {
+.slide-in.show {
     opacity: 1;
-    visibility: visible;
+    transform: translateX(0);
 }
 
-.popup-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
+/* ====== Estilos de Foco e Validação para Formulários ====== */
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #FFD700;
 }
 
-/* Responsividade para dispositivos móveis (telas menores que 768px) */
+input:invalid, textarea:invalid {
+    border: 2px solid #e80505;
+}
+
+/* ====== Botões com Efeito Hover ====== */
+button, .btn {
+    padding: 10px 20px;
+    background-color: #e80505;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover, .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ====== Responsividade ====== */
 @media (max-width: 768px) {
-    /* Cabeçalho e Menu de Navegação */
+    /* Ajustes para Cabeçalho e Menu */
     header {
         padding: 10px 0;
     }
@@ -443,7 +413,7 @@ footer p {
         padding: 8px 10px;
     }
 
-    /* Seção Hero (Boas-Vindas) */
+    /* Ajustes para Seção Hero */
     .hero {
         height: 60vh;
         padding: 0 10px;
@@ -465,14 +435,13 @@ footer p {
     /* Galeria de Cardápio */
     .galeria-cardapio {
         width: 100%;
-        max-width: 100%;
     }
 
     .item-cardapio img {
         width: 100%;
     }
 
-    /* Seção de Contato */
+    /* Ajustes para Contato */
     #contato {
         padding: 30px 15px;
     }
@@ -490,16 +459,14 @@ footer p {
         font-size: 1em;
     }
 
-    /* Botão do WhatsApp e Instagram */
-    .whatsapp-link,
-    .instagram-link {
+    /* Ajustes para Botões Fixos */
+    .whatsapp-link, .instagram-link {
         width: 50px;
         height: 50px;
         bottom: 15px;
     }
 
-    .whatsapp-link img,
-    .instagram-link img {
+    .whatsapp-link img, .instagram-link img {
         width: 30px;
         height: 30px;
     }
@@ -529,9 +496,7 @@ footer p {
     }
 }
 
-/* Responsividade para dispositivos muito pequenos (telas menores que 480px) */
 @media (max-width: 480px) {
-    /* Ajuste do Título Hero */
     .hero-content h1 {
         font-size: 1.8em;
     }
@@ -540,7 +505,6 @@ footer p {
         font-size: 0.9em;
     }
 
-    /* Seção de Cardápio e Itens */
     .menu-items {
         flex-direction: column;
         gap: 10px;
@@ -550,7 +514,6 @@ footer p {
         width: 90%;
     }
 
-    /* Mapa de Contato */
     .mapa-container {
         height: 250px;
     }

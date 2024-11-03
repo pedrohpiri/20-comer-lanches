@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         threshold: 0.1,
         rootMargin: "0px 0px -100px 0px"
     };
+
     const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) return;
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
             appearOnScroll.unobserve(entry.target);
         });
     }, appearOptions);
+
     faders.forEach(fader => {
         appearOnScroll.observe(fader);
     });
@@ -38,3 +40,33 @@ function mostrarSlide(n) {
     }
     slides[slideIndex].style.display = "block";
 }
+
+// Animação de deslizar ao rolar a página
+document.addEventListener("DOMContentLoaded", function() {
+    const sliders = document.querySelectorAll(".slide-in");
+    const slideOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px"
+    };
+
+    const slideOnScroll = new IntersectionObserver(function(entries, slideOnScroll) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("show");
+            slideOnScroll.unobserve(entry.target);
+        });
+    }, slideOptions);
+
+    sliders.forEach(slider => {
+        slideOnScroll.observe(slider);
+    });
+});
+
+// Efeito Parallax para imagens de fundo
+window.addEventListener('scroll', function() {
+    const parallax = document.querySelector('.parallax');
+    if (parallax) {
+        let offset = window.pageYOffset;
+        parallax.style.backgroundPositionY = offset * 0.5 + "px";
+    }
+});
