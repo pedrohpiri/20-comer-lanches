@@ -12,9 +12,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #FFD700;
-    padding: 15px 20px; /* Ajuste de padding */
+    background-color: #ffc400db; /* Substitua pela cor exata da logomarca */
+    padding: 15px 20px;
 }
+
 
 /* Estilos para a Logomarca */
 .logo img {
@@ -42,7 +43,7 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #333;
-    color: #FFD700;
+    color:  #ffc400db;
 }
 
 
@@ -206,7 +207,7 @@ section {
 
 /* ====== Seção de Contato ====== */
 #contato {
-    background-color: #FFD700;
+    background-color:  #ffc400db;
     color: #333;
 }
 
